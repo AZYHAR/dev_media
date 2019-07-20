@@ -20,7 +20,7 @@ bcrypt.js => password encryption
 
 config => for global variables
 
-gravatar => for profile avatars  
+gravatar => for profile avatars
 if user signs up, they can use an email
 that is associated with a gravatar account and it will show their profile image automatically
 
