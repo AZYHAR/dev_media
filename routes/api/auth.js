@@ -17,7 +17,7 @@ const User = require('../../models/User');
 // @access   Public
 // by adding auth as the second parameter
 // route will request JWT token to visit this route 
-router.get('/', auth, async(req, res) => {
+router.get('/', auth, async (req, res) => {
     // Call to database
     try {
         const user = await User.findById(req.user.id).select('-password');
