@@ -42,3 +42,21 @@ x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4M
 ### DELETE profile experience
 DELETE http://localhost:5000/api/profile/experience/5d34a94c4a85f13dcde08d1f HTTP/1.1
 x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4MzIyYzJjZDkzZDYwZDEwOWI4In0sImlhdCI6MTU2MzczMjAxOCwiZXhwIjoxNTY0MDkyMDE4fQ.acpqDbJoIjSmg0zAJQJby3BkC0gxIL7TvhxKwmuLJpE
+
+### Add profile education
+PUT http://localhost:5000/api/profile/education HTTP/1.1
+content-type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4MzIyYzJjZDkzZDYwZDEwOWI4In0sImlhdCI6MTU2MzczMjAxOCwiZXhwIjoxNTY0MDkyMDE4fQ.acpqDbJoIjSmg0zAJQJby3BkC0gxIL7TvhxKwmuLJpE
+
+{
+    "school": "Northern Essex College",
+    "degree": "Associates Degree",
+    "fieldofstudy": "Computer Science",
+    "from": "8-2-2003",
+    "to": "3-4-2005",
+    "description": "Got Associates in computer science"
+}
+
+### DELETE profile experience
+DELETE http://localhost:5000/api/profile/education/5d34b49d4a7b9f414d8b405c HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4MzIyYzJjZDkzZDYwZDEwOWI4In0sImlhdCI6MTU2MzczMjAxOCwiZXhwIjoxNTY0MDkyMDE4fQ.acpqDbJoIjSmg0zAJQJby3BkC0gxIL7TvhxKwmuLJpE
