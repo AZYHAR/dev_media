@@ -20,3 +20,7 @@ content-type: application/json
 #### Get auth user
 GET http://localhost:5000/api/auth HTTP/1.1
 x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNDgwYjcwZTZmZWIyZjE1Y2RlYTA0In0sImlhdCI6MTU2MzcyMTkxMSwiZXhwIjoxNTY0MDgxOTExfQ.hkvFosaGPv3o4bzQysjDmZmmb39V0dQNhLuPNCg5WPY
+
+# Get logged in user profile
+GET http://localhost:5000/api/profile/me HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNDgwYjcwZTZmZWIyZjE1Y2RlYTA0In0sImlhdCI6MTU2MzcyMTkxMSwiZXhwIjoxNTY0MDgxOTExfQ.hkvFosaGPv3o4bzQysjDmZmmb39V0dQNhLuPNCg5WPY
