@@ -6,3 +6,25 @@ x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4M
 {
     "text" : "Hi"
 }
+
+### Get Post 
+GET http://localhost:5000/api/posts HTTP/1.1
+content-type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4MzIyYzJjZDkzZDYwZDEwOWI4In0sImlhdCI6MTU2MzczOTcxMSwiZXhwIjoxNTY0MDk5NzExfQ.6_bER_wzejRJ0j8k7iWrK6P3SR6R2MIT-FGEQ_vV8i0
+
+{
+    "text" : "Hi"
+}
+
+### Get Post by ID
+GET http://localhost:5000/api/posts/5d34c918f6624b469b21dcdc HTTP/1.1
+content-type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4MzIyYzJjZDkzZDYwZDEwOWI4In0sImlhdCI6MTU2MzczOTcxMSwiZXhwIjoxNTY0MDk5NzExfQ.6_bER_wzejRJ0j8k7iWrK6P3SR6R2MIT-FGEQ_vV8i0
+
+{
+    "text" : "Hi"
+}
+
+### Get Post by ID
+DELETE  http://localhost:5000/api/posts/5d34c918f6624b469b21dcdc HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4MzIyYzJjZDkzZDYwZDEwOWI4In0sImlhdCI6MTU2MzczOTcxMSwiZXhwIjoxNTY0MDk5NzExfQ.6_bER_wzejRJ0j8k7iWrK6P3SR6R2MIT-FGEQ_vV8i0
