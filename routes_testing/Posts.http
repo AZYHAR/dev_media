@@ -1,0 +1,10 @@
+### Register -> get token
+POST http://localhost:5000/api/users HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Anton Zyhar",
+    "email": "tohazigark@gmail.com",
+    "password": "123456"
+}
+

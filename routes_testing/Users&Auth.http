@@ -1,0 +1,3 @@
+#### Get auth user
+GET http://localhost:5000/api/auth HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNDdiNWZhNTkyMDEyZDUzYWFkMTEwIn0sImlhdCI6MTU2MzcyMDU0MywiZXhwIjoxNTY0MDgwNTQzfQ.tbbe0RJAW5Bar4T5G0xfCs_24uFnrFmE8uxxyN-VY2E

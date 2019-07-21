@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://azyhar:azyhar1234@devconnector-exonf.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken"
+}
