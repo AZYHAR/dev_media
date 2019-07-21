@@ -41,16 +41,15 @@ so we don`t have to refresh it every time we make a change
 
 concurrently => allow us to run our back-end express server and front-end react server at the same time with one single command
 
+## JWT authentification
 
-## JWT authentification  
+Rule: JWT token consist of three parts
 
-Rule: JWT token consist of three parts  
+### Encoded JWT Token
 
-### Encoded JWT Token  
-
-><span style="color:pink">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span>.  
-<span style="color:violet">eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IiIsImlhdCI6MTUxNjIzOTAyMn0</span>.
-<span style="color:lightskyblue">m55O-8YDpQbJLIS0ea9Bpb1VulQsOppUSuk10BRh7cc</span>
+> <span style="color:pink">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span>.  
+> <span style="color:violet">eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IiIsImlhdCI6MTUxNjIzOTAyMn0</span>.
+> <span style="color:lightskyblue">m55O-8YDpQbJLIS0ea9Bpb1VulQsOppUSuk10BRh7cc</span>
 
 #### Header (Algorithm, Token Type)
 
@@ -59,9 +58,9 @@ Rule: JWT token consist of three parts
   "alg": "HS256",
   "typ": "JWT"
 }
-```  
+```
 
-#### Payload (Data)  
+#### Payload (Data)
 
 ```json
 {
@@ -69,15 +68,26 @@ Rule: JWT token consist of three parts
   "name": "",
   "iat": 1516239022
 }
-```  
+```
 
-#### Verify signature  
+#### Verify signature
 
-```json  
-HMACSHA256(
-  base64UrlEncode(header) + "." +
-  base64UrlEncode(payload),
-  [your-256-bit-secret] 
-)
-```  
+```json
+HMACSHA256(base64UrlEncode(header) + "." + base64UrlEncode(payload), [
+  your - 256 - bit - secret
+])
+```
 
+## FrontEnd
+
+Install packages  
+npm i
+
+axios => to make http request  
+react-router-dom  
+redux  
+react-redux  
+redux-thunk  
+redux-devtools-extension  
+moment => date and time  
+react-moment
