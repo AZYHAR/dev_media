@@ -1,0 +1,29 @@
+### Create and Update Profile
+POST http://localhost:5000/api/profile HTTP/1.1
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNDgwYjcwZTZmZWIyZjE1Y2RlYTA0In0sImlhdCI6MTU2MzcyNzA5OCwiZXhwIjoxNTY0MDg3MDk4fQ.G5-V_ouNtoU9d2_c-onT7aso_LqUaiucQO80wxnqwrw
+
+{
+    "company": "TechSoft INC",
+    "status": "Junior Developer",
+    "website" : "http://www.tony.com",
+    "skills": "HTML , JS, Python",
+    "location": "Toronto, ON",
+    "bio": "I am a student that studing in Seneca College on Mars",
+    "githubusername": "azyhar",
+    "twitter": "http://twitter.com/azyhar",
+    "facebook": "http://facebook.com/azyhar",
+    "youtube": "http://youtube.com/azyhar"
+}
+
+### Get logged in user profile
+GET http://localhost:5000/api/profile/me HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNDgwYjcwZTZmZWIyZjE1Y2RlYTA0In0sImlhdCI6MTU2MzcyMTkxMSwiZXhwIjoxNTY0MDgxOTExfQ.hkvFosaGPv3o4bzQysjDmZmmb39V0dQNhLuPNCg5WPY
+
+### Get all profiles
+GET http://localhost:5000/api/profile HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNDgwYjcwZTZmZWIyZjE1Y2RlYTA0In0sImlhdCI6MTU2MzcyMTkxMSwiZXhwIjoxNTY0MDgxOTExfQ.hkvFosaGPv3o4bzQysjDmZmmb39V0dQNhLuPNCg5WPY
+
+### Get profile by user ID
+GET http://localhost:5000/api/profile/user/5d347b5fa592012d53aad110 HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNDgwYjcwZTZmZWIyZjE1Y2RlYTA0In0sImlhdCI6MTU2MzcyMTkxMSwiZXhwIjoxNTY0MDgxOTExfQ.hkvFosaGPv3o4bzQysjDmZmmb39V0dQNhLuPNCg5WPY
