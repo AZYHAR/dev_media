@@ -24,3 +24,21 @@ x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNDk4O
 ### Delete user profile
 DELETE  http://localhost:5000/api/profile HTTP/1.1
 x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE3ZDAyYzJjZDkzZDYwZDEwOWI2In0sImlhdCI6MTU2MzczMTkyMSwiZXhwIjoxNTY0MDkxOTIxfQ.OG3rBDRPc7F06ZeMBZ9xaiTmMhoxDAbrqZhrYf97fYs
+
+### Add profile experience
+PUT http://localhost:5000/api/profile/experience HTTP/1.1
+content-type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4MzIyYzJjZDkzZDYwZDEwOWI4In0sImlhdCI6MTU2MzczMjAxOCwiZXhwIjoxNTY0MDkyMDE4fQ.acpqDbJoIjSmg0zAJQJby3BkC0gxIL7TvhxKwmuLJpE
+
+{
+    "title": "Web Developer",
+    "company": "Apple inc",
+    "location": "Toronto, ON",
+    "from": "8-10-2010",
+    "current": true,
+    "description": "Full Stack Web Dev"
+}
+
+### DELETE profile experience
+DELETE http://localhost:5000/api/profile/experience/5d34a94c4a85f13dcde08d1f HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4MzIyYzJjZDkzZDYwZDEwOWI4In0sImlhdCI6MTU2MzczMjAxOCwiZXhwIjoxNTY0MDkyMDE4fQ.acpqDbJoIjSmg0zAJQJby3BkC0gxIL7TvhxKwmuLJpE
