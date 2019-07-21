@@ -43,7 +43,7 @@ router.post(
 
         const { name, email, password } = req.body;
 
-        try { // Eror handling
+        try { // Error handling
             
             
             let user = await User.findOne({
