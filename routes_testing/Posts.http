@@ -7,9 +7,8 @@ x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4M
     "text" : "Hi"
 }
 
-### Get Post 
+### Get All Posts
 GET http://localhost:5000/api/posts HTTP/1.1
-content-type: application/json
 x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4MzIyYzJjZDkzZDYwZDEwOWI4In0sImlhdCI6MTU2MzczOTcxMSwiZXhwIjoxNTY0MDk5NzExfQ.6_bER_wzejRJ0j8k7iWrK6P3SR6R2MIT-FGEQ_vV8i0
 
 {
@@ -17,22 +16,30 @@ x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4M
 }
 
 ### Get Post by ID
-GET http://localhost:5000/api/posts/5d34cf77c4eb3d4a80dfb0a9 HTTP/1.1
-content-type: application/json
+GET  http://localhost:5000/api/posts/5d34d8cd79db384d19ef843e HTTP/1.1
 x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4MzIyYzJjZDkzZDYwZDEwOWI4In0sImlhdCI6MTU2MzczOTcxMSwiZXhwIjoxNTY0MDk5NzExfQ.6_bER_wzejRJ0j8k7iWrK6P3SR6R2MIT-FGEQ_vV8i0
 
-{
-    "text" : "Hi"
-}
-
-### Get Post by ID
-DELETE  http://localhost:5000/api/posts/5d34c918f6624b469b21dcdc HTTP/1.1
+### DELETE Post
+DELETE  http://localhost:5000/api/posts/5d34cf77c4eb3d4a80dfb0a9 HTTP/1.1
 x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4MzIyYzJjZDkzZDYwZDEwOWI4In0sImlhdCI6MTU2MzczOTcxMSwiZXhwIjoxNTY0MDk5NzExfQ.6_bER_wzejRJ0j8k7iWrK6P3SR6R2MIT-FGEQ_vV8i0
 
 ### Like the post
-PUT  http://localhost:5000/api/posts/like/5d34cf77c4eb3d4a80dfb0a9 HTTP/1.1
+PUT  http://localhost:5000/api/posts/like/5d34d8cd79db384d19ef843e HTTP/1.1
 x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGQwM2Y4NjIyOWI0YWExMGZkZjNjIn0sImlhdCI6MTU2Mzc0MjI3MSwiZXhwIjoxNTY0MTAyMjcxfQ.F2a2nri_ca1n9v9X6A6bTbpqG3mfkm5rWQK3qhd_1Kk
 
 ### Ulike the post
 PUT  http://localhost:5000/api/posts/ulike/5d34cf77c4eb3d4a80dfb0a9 HTTP/1.1
 x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGQwM2Y4NjIyOWI0YWExMGZkZjNjIn0sImlhdCI6MTU2Mzc0MjI3MSwiZXhwIjoxNTY0MTAyMjcxfQ.F2a2nri_ca1n9v9X6A6bTbpqG3mfkm5rWQK3qhd_1Kk
+
+### Add Comment
+POST http://localhost:5000/api/posts/comment/5d34d8cd79db384d19ef843e HTTP/1.1
+content-type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4MzIyYzJjZDkzZDYwZDEwOWI4In0sImlhdCI6MTU2Mzc0MzIzMywiZXhwIjoxNTY0MTAzMjMzfQ.qDxg6hUE4j5PpaFDryMerQivSqx7wHKpGL3OBLBz254
+
+{
+    "text" : "Hi"
+}
+
+### Delete Comment
+DELETE  http://localhost:5000/api/posts/comment/5d34d8cd79db384d19ef843e/5d34d9cb438c374dfaa504cc HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNGE4MzIyYzJjZDkzZDYwZDEwOWI4In0sImlhdCI6MTU2Mzc0NTEwMCwiZXhwIjoxNTY0MTA1MTAwfQ.lqbH6qeuSVs3C9AeEHS48k_yJK35JjelhyVbg5fcuTI
