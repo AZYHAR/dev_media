@@ -3,9 +3,10 @@ import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
+import { register } from '../../actions/auth';
 import propTypes from 'prop-types';
 
-const Register = ({ setAlert }) => {
+const Register = ({ setAlert, register }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,7 +27,7 @@ const Register = ({ setAlert }) => {
     if (password !== password2) {
       setAlert('Password do not match', 'danger');
     } else {
-      console.log('Success');
+      register({ name, email, password });
     }
   };
 
@@ -93,11 +94,12 @@ const Register = ({ setAlert }) => {
 };
 
 Register.propTypes = {
-  setAlert: propTypes.func.isRequired
+  setAlert: propTypes.func.isRequired,
+  register: propTypes.func.isRequired
 };
 
 // connect(state, object with any actions I need to use, will allow to access props.alert)(Component) connect with Redux
 export default connect(
   null,
-  { setAlert }
+  { setAlert, register }
 )(Register);
