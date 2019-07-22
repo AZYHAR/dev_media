@@ -47,9 +47,14 @@ Rule: JWT token consist of three parts
 
 ### Encoded JWT Token
 
-> <span style="color:pink">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span>.  
-> <span style="color:violet">eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IiIsImlhdCI6MTUxNjIzOTAyMn0</span>.
-> <span style="color:lightskyblue">m55O-8YDpQbJLIS0ea9Bpb1VulQsOppUSuk10BRh7cc</span>
+> <span style="color:pink">
+> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+> </span>.  
+> <span style="color:violet">  
+> eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IiIsImlhdCI6MTUxNjIzOTAyMn0
+> </span>.
+> <span style="color:lightskyblue">
+> m55O-8YDpQbJLIS0ea9Bpb1VulQsOppUSuk10BRh7cc</span>
 
 #### Header (Algorithm, Token Type)
 
@@ -91,3 +96,8 @@ redux-thunk
 redux-devtools-extension  
 moment => date and time  
 react-moment
+
+### Redux
+
+> <span style="color:green">
+> Advantages: </span>Prevent from using state manager
