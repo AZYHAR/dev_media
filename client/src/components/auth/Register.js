@@ -1,11 +1,12 @@
 import React, { Fragment, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
-    passowrd2: ''
+    password2: ''
   });
 
   const { name, email, password, password2 } = formData;
@@ -61,9 +62,9 @@ const Register = () => {
             type='password'
             placeholder='Password'
             name='password'
+            minLength='6'
             value={password}
             onChange={e => onChange(e)}
-            minLength='6'
             required
           />
         </div>
@@ -72,16 +73,16 @@ const Register = () => {
             type='password'
             placeholder='Confirm Password'
             name='password2'
+            minLength='6'
             value={password2}
             onChange={e => onChange(e)}
-            minLength='6'
             required
           />
         </div>
         <input type='submit' className='btn btn-primary' value='Register' />
       </form>
       <p className='my-1'>
-        Already have an account? <a href='login.html'>Sign In</a>
+        Already have an account? <Link to='/login'>Sign In</Link>
       </p>
     </Fragment>
   );
