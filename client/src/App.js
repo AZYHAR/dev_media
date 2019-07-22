@@ -18,7 +18,7 @@ import { loadUser } from './actions/auth';
 import './App.css';
 import setAuthToken from './utils/setAuthToken';
 
-if (localStorage.token !== 'null') {
+if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
 
