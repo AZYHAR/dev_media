@@ -95,7 +95,8 @@ react-redux
 redux-thunk  
 redux-devtools-extension  
 moment => date and time  
-react-moment
+react-moment  
+uuid => helps to create id for actions to track them
 
 ### Redux
 
