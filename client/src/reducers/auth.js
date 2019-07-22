@@ -1,4 +1,9 @@
-import { REGISTER_SUCCESS, REGISTER_FAIL } from '../actions/types';
+import {
+  REGISTER_SUCCESS,
+  REGISTER_FAIL,
+  USER_LOADED,
+  AUTH_ERROR
+} from '../actions/types';
 import { stat } from 'fs';
 
 const initialState = {
@@ -19,6 +24,13 @@ export default function(state = initialState, action) {
   // Destructuring
   const { type, payload } = action;
   switch (type) {
+    case USER_LOADED:
+      return {
+        ...state,
+        isAuthenticated: true,
+        loading: false,
+        user: payload
+      };
     case REGISTER_SUCCESS:
       // Update local storage token
       // for user access
@@ -33,6 +45,7 @@ export default function(state = initialState, action) {
         loading: false
       };
     case REGISTER_FAIL:
+    case AUTH_ERROR:
       // Remove token
       localStorage.removeItem('token');
       return {
