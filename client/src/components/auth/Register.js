@@ -1,8 +1,11 @@
 import React, { Fragment, useState } from 'react';
+// For connecting components with redux store
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import { setAlert } from '../../actions/alert';
+import propTypes from 'prop-types';
 
-const Register = () => {
+const Register = ({ setAlert }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,30 +24,9 @@ const Register = () => {
   const onSubmit = async e => {
     e.preventDefault();
     if (password !== password2) {
-      console.log('Password do not match');
+      setAlert('Password do not match', 'danger');
     } else {
-      // Example how to test the route with axios
-      // This part will move to redux
-      const newUser = {
-        name,
-        email,
-        password
-      };
-
-      try {
-        const config = {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        };
-
-        const body = JSON.stringify(newUser);
-        const res = await axios.post('/api/users', body, config);
-        console.log(res.data);
-      } catch (err) {
-        console.error(err.response.data);
-      }
-      // console.log('Success');
+      console.log('Success');
     }
   };
 
@@ -110,4 +92,12 @@ const Register = () => {
   );
 };
 
-export default Register;
+Register.propTypes = {
+  setAlert: propTypes.func.isRequired
+};
+
+// connect(state, object with any actions I need to use, will allow to access props.alert)(Component) connect with Redux
+export default connect(
+  null,
+  { setAlert }
+)(Register);
