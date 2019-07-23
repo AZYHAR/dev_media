@@ -1,13 +1,14 @@
 import React, { Fragment, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
-import { getProfileById } from '../../actions/profile';
 import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
 import ProfileExperience from './ProfileExperience';
 import ProfileEducation from './ProfileEducation';
+import ProfileGitHub from './ProfileGitHub';
+import { getProfileById } from '../../actions/profile';
 
 const Profile = ({
   getProfileById,
@@ -17,7 +18,7 @@ const Profile = ({
 }) => {
   useEffect(() => {
     getProfileById(match.params.id);
-  }, [getProfileById, match]);
+  }, [getProfileById, match.params.id]);
 
   return (
     <Fragment>
@@ -26,7 +27,7 @@ const Profile = ({
       ) : (
         <Fragment>
           <Link to='/profiles' className='btn btn-light'>
-            Back to profiles
+            Back To Profiles
           </Link>
           {auth.isAuthenticated &&
             auth.loading === false &&
@@ -53,6 +54,7 @@ const Profile = ({
                 <h4>No experience credentials</h4>
               )}
             </div>
+
             <div className='profile-edu bg-white p-2'>
               <h2 className='text-primary'>Education</h2>
               {profile.education.length > 0 ? (
@@ -68,6 +70,10 @@ const Profile = ({
                 <h4>No education credentials</h4>
               )}
             </div>
+
+            {profile.githubusername && (
+              <ProfileGitHub username={profile.githubusername} />
+            )}
           </div>
         </Fragment>
       )}

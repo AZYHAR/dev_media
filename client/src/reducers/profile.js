@@ -25,7 +25,6 @@ export default function(state = initialState, action) {
         ...state,
         profile: payload,
         profiles: [],
-        repos: [],
         loading: false,
         error: {}
       };
@@ -34,7 +33,6 @@ export default function(state = initialState, action) {
         ...state,
         profile: null,
         profiles: payload,
-        repos: [],
         loading: false,
         error: {}
       };
