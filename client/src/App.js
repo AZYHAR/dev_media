@@ -9,11 +9,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import PrivateRoute from './components/routing/PrivateRoute';
 import CreateProfile from './components/profile-forms/CreateProfile';
 import EditProfile from './components/profile-forms/EditProfile';
-<<<<<<< HEAD
 import AddExerience from './components/profile-forms/AddExperience';
-=======
-import AddExperience from './components/profile-forms/AddExperience';
->>>>>>> ec65e3ec1afb979ac01171068e243a71b13d0d21
 import AddEducation from './components/profile-forms/AddEducation';
 
 // Redux
@@ -59,11 +55,7 @@ const App = () => {
               <PrivateRoute
                 exact
                 path='/add-experience'
-<<<<<<< HEAD
                 component={AddExerience}
-=======
-                component={AddExperience}
->>>>>>> ec65e3ec1afb979ac01171068e243a71b13d0d21
               />
               <PrivateRoute
                 exact
