@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { Fragment, useState, useEffect } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -28,6 +27,21 @@ const EditProfile = ({
 
   const [displaySocialInputs, toggleSocialInputs] = useState(false);
 
+  const {
+    company,
+    website,
+    location,
+    status,
+    skills,
+    githubusername,
+    bio,
+    twitter,
+    facebook,
+    linkedin,
+    youtube,
+    instagram
+  } = formData;
+
   useEffect(() => {
     getCurrentProfile();
 
@@ -47,21 +61,6 @@ const EditProfile = ({
       instagram: loading || !profile.social ? '' : profile.social.instagram
     });
   }, [loading, getCurrentProfile]);
-
-  const {
-    company,
-    website,
-    location,
-    status,
-    skills,
-    githubusername,
-    bio,
-    twitter,
-    facebook,
-    linkedin,
-    youtube,
-    instagram
-  } = formData;
 
   const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });

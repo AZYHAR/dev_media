@@ -24,6 +24,8 @@ export default function(state = initialState, action) {
       return {
         ...state,
         profile: payload,
+        profiles: [],
+        repos: [],
         loading: false,
         error: {}
       };
