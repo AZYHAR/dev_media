@@ -15,4 +15,8 @@ export const LOGOUT = 'LOGOUT';
 export const GET_PROFILE = 'GET_PROFILE';
 export const PROFILE_ERROR = 'PROFILE_ERROR';
 export const CLEAR_PROFILE = 'PROFILE_ERROR';
+<<<<<<< HEAD
 export const UPDATE_PROFILE = 'GET_PROFILE';
+=======
+export const UPDATE_PROFILE = 'UPDATE_PROFILE';
+>>>>>>> ec65e3ec1afb979ac01171068e243a71b13d0d21
