@@ -32,14 +32,14 @@ export default function(state = initialState, action) {
         ...state,
         profile: null,
         profiles: payload,
-        loading: false
+        repos: [],
+        loading: false,
+        error: {}
       };
     case PROFILE_ERROR:
       return {
         ...state,
         profile: null,
-        profiles: [],
-        repos: [],
         error: payload,
         loading: false
       };

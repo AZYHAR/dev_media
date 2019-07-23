@@ -32,9 +32,7 @@ export const loadUser = () => async dispatch => {
       });
     }
   } else {
-    dispatch({
-      type: AUTH_ERROR
-    });
+    dispatch({ type: LOGOUT });
   }
 };
 
