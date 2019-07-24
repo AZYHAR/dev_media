@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://azyhar:azyhar1234@devconnector-exonf.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "166ddd6c96f9e3edcd23",
+    "githubSecret": "161541cba86bb77bcc1dbbeab7aaf6725dc85504"
+}
