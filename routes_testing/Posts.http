@@ -1,7 +1,7 @@
 ### Add Post 
 POST http://localhost:5000/api/posts HTTP/1.1
 content-type: application/json
-x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzN2E0MjM3NmFhMWM1MDI0ZWFjMGFlIn0sImlhdCI6MTU2MzkyNzYwNSwiZXhwIjoxNTY0Mjg3NjA1fQ.e9gDwqNw6q9yxxwn4iOCpYEd7hJOBOHOmvr2RmFZvSI
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWQzNjZkZDIxOTIxNTUyOTM3OWNiNGUwIn0sImlhdCI6MTU2NDAwMDkxOCwiZXhwIjoxNTY0MzYwOTE4fQ.q0w8EtqLc4vB-7BwH2w46t5J56LIhvGqECp7e5dRQk4
 
 {
     "text" : "Hi"
