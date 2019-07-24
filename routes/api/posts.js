@@ -128,9 +128,6 @@ router.put('/like/:id', auth, async (req, res) => {
     res.json(post.likes);
   } catch (err) {
     console.error(err.message);
-    if (err.kind === 'ObjectId') {
-      return res.status(404).json({ msg: 'Post not found' });
-    }
     res.status(500).send('Server Error');
   }
 });
@@ -138,7 +135,7 @@ router.put('/like/:id', auth, async (req, res) => {
 // @route    PUT api/posts/ulike/:id
 // @desc     Ulike a post
 // @access   Private
-router.put('/ulike/:id', auth, async (req, res) => {
+router.put('/unlike/:id', auth, async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
 
@@ -162,9 +159,6 @@ router.put('/ulike/:id', auth, async (req, res) => {
     res.json(post.likes);
   } catch (err) {
     console.error(err.message);
-    if (err.kind === 'ObjectId') {
-      return res.status(404).json({ msg: 'Post not found' });
-    }
     res.status(500).send('Server Error');
   }
 });
