@@ -6,7 +6,6 @@ import {
   ADD_POST,
   GET_POST,
   ADD_COMMENT,
-  REMOVE_ALERT,
   REMOVE_COMMENT
 } from '../actions/types';
 

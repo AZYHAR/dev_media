@@ -1,5 +1,5 @@
 {
-  "name": "udemy_practice",
+  "name": "dev_media",
   "version": "1.0.0",
   "description": "Social network for developers",
   "main": "server.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AZYHAR/Udemy_Practice.git"
+    "url": "git+https://github.com/AZYHAR/dev_media.git"
   },
   "author": "Anton Zyhar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AZYHAR/Udemy_Practice/issues"
+    "url": "https://github.com/AZYHAR/dev_media/issues"
   },
-  "homepage": "https://github.com/AZYHAR/Udemy_Practice#readme",
+  "homepage": "https://github.com/AZYHAR/dev_media#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "config": "^3.2.1",

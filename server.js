@@ -25,7 +25,7 @@ app.use('/api/users', require('./routes/api/users'));
 
 // ? Backend setup
 // Serve static assets in production
-if (process.ENV.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
   // Set static folder
   app.use(express.static('client/build'));
 
