@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 import Landing from './components/layout/Landing';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
@@ -72,6 +73,7 @@ const App = () => {
               <PrivateRoute exact path='/posts/:id' component={Post} />
             </Switch>
           </section>
+          <Footer />
         </Fragment>
       </Router>
     </Provider>
