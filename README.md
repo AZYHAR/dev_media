@@ -1,4 +1,4 @@
-# Udemy_Practice
+# DevMedia
 
 #### Initilize package.json
 
