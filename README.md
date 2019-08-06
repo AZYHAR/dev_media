@@ -1,104 +1,73 @@
-# DevMedia
 
-#### Initilize package.json
+# [DevMedia](https://dev-media.herokuapp.com)
+
+DevMedia is full stack social media network that gives an opportunity for building new connections with other developers.  
+
+### Implemented functions:
+
+* login and sign up
+* create and update personal portfolio  
+    * Education info  
+    * Work info
+    * Social media links
+    * List all GitHub projects
+* request portfolios of other developers
+* create posts
+* leave comments below each post
+
+## Heroku  
+
+DevMedia is available on Heroku: https://dev-media.herokuapp.com
+
+## Technologies:  
+
+### Back-end:  
+
+* Node.js  
+    * [express](https://expressjs.com) (main framework for backend)
+    * [gravatar](https://gravatar.com) (profile avatars connected with email)
+    * [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) (token validation)
+    * [mongoose](https://mongoosejs.com) (database interactions)
+    * [request](https://www.npmjs.com/package/request) (http request module)
+    * [nodemon](https://www.npmjs.com/package/nodemon) (debug tool that track changes and restart node application)
+    * [concurrently](https://www.npmjs.com/package/concurrently) (allows to run back+ front end with one command)
+
+### Front-end:
+
+* [React 16.8.6](https://reactjs.org)
+* [Redux 7.1.0](https://redux.js.org) (state management tool)
+    * [redux-devtools-extension]() (provides working comfortability with Redux)  
+
+
+## Local installation
+
+#### 1. Clone repository  
 
 ```bash
-npm init
+    git clone https://github.com/AZYHAR/dev_media.git
 ```
 
-## Reguar dependencies explonation
+#### 2. Install dependencies
 
 ```bash
-npm i ...
+    # Install server dependencies
+    npm install
+
+    # Install client dependencies
+    cd client
+    npm install
 ```
 
-express => main framework for backend
-
-express-validator => for data validation
-
-bcrypt.js => password encryption
-
-config => for global variables
-
-gravatar => for profile avatars
-if user signs up, they can use an email
-that is associated with a gravatar account and it will show their profile image automatically
-
-jsonwebtoken => for jwt to pass along a token validation
-
-mongoos => layer that sits on top of the database so we can interact with it
-
-request => module that allows to make http requests to another API, installing for github repositores. We want our profiles to be able to have GitHub repositores listed on them. So we're going to make that request from our backend so that we can hide our API key and we can just return repositories
-
-## Dev Dependencies
+#### 3. Run front and back end with one line  
 
 ```bash
-npm i -D ...
+    npm run dev
 ```
 
-nodemon => will constantly watch our server
-so we don`t have to refresh it every time we make a change
+## Authors
 
-concurrently => allow us to run our back-end express server and front-end react server at the same time with one single command
+**Anton Zyhar**   [azyhar](https://github.com/azyhar)
 
-## JWT authentification
+## License
 
-Rule: JWT token consist of three parts
-
-### Encoded JWT Token
-
-> <span style="color:pink">
-> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
-> </span>.  
-> <span style="color:violet">  
-> eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IiIsImlhdCI6MTUxNjIzOTAyMn0
-> </span>.
-> <span style="color:lightskyblue">
-> m55O-8YDpQbJLIS0ea9Bpb1VulQsOppUSuk10BRh7cc</span>
-
-#### Header (Algorithm, Token Type)
-
-```json
-{
-  "alg": "HS256",
-  "typ": "JWT"
-}
-```
-
-#### Payload (Data)
-
-```json
-{
-  "sub": "1234567890",
-  "name": "",
-  "iat": 1516239022
-}
-```
-
-#### Verify signature
-
-```json
-HMACSHA256(base64UrlEncode(header) + "." + base64UrlEncode(payload), [
-  your - 256 - bit - secret
-])
-```
-
-## FrontEnd
-
-Install packages  
-npm i
-
-axios => to make http request  
-react-router-dom  
-redux  
-react-redux  
-redux-thunk  
-redux-devtools-extension  
-moment => date and time  
-react-moment  
-uuid => helps to create id for actions to track them
-
-### Redux
-
-> <span style="color:green">
-> Advantages: </span>Prevent from using state manager
+This project is licensed under the MIT License
