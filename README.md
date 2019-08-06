@@ -36,7 +36,7 @@ DevMedia is available on Heroku: https://dev-media.herokuapp.com
 
 * [React 16.8.6](https://reactjs.org)
 * [Redux 7.1.0](https://redux.js.org) (state management tool)
-    * [redux-devtools-extension]() (provides working comfortability with Redux)  
+    * [redux-devtools-extension](https://www.npmjs.com/package/redux-devtools-extension) (provides working comfortability with Redux)  
 
 
 ## Local installation
