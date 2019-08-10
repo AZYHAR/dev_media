@@ -31,7 +31,8 @@ DevMedia is available on Heroku: https://dev-media.herokuapp.com
     * [request](https://www.npmjs.com/package/request) (http request module)
     * [nodemon](https://www.npmjs.com/package/nodemon) (debug tool that track changes and restart node application)
     * [concurrently](https://www.npmjs.com/package/concurrently) (allows to run back+ front end with one command)
-
+    * Token authentication
+ 
 ### Front-end:
 
 * [React 16.8.6](https://reactjs.org)
